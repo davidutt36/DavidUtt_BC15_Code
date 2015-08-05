@@ -6,7 +6,7 @@ background(#ffffff);
 }
 
 void draw(){
-  if (numshape >= 100) 
+  if (numshape >= 150) 
   {
   scale(.5);
   }
@@ -15,6 +15,11 @@ void draw(){
   {
   scale(1.5);
   fill(#ffffff);
+  }
+  
+    if (numshape >= 350) 
+  {
+  stop();
   }
   fill(0);
   stroke(#ffffff);
