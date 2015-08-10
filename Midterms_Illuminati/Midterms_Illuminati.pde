@@ -1,7 +1,12 @@
 float r = 5;
 float speed = 20;
-float r1;
-float r2;
+float x;
+float y;
+float q;
+float z;
+
+int switcher =0;
+
 
 void setup(){
 size(500,500);
@@ -16,14 +21,20 @@ void draw(){
   //fill(0,10);
   //rect(0,0,width,height);
   
-  float x = r * cos(frameCount * speed);
-  float y = r * sin(1 * speed);
-   float q = r * sin(frameCount * speed);
-  float z = r * cos(frameCount * speed);
- 
-// fill(69,255,255);
-// stroke(240,163,12);
-// ellipse(x + width/2 ,y + height/2,6,12);
+   x = r * cos(frameCount * speed);
+   y = r * sin(1 * speed);
+   q = r * sin(frameCount * speed);
+   z = r * cos(frameCount * speed);
+   
+   
+  if (mousePressed == true){
+  
+
+       q = r * cos(frameCount * speed);
+       z = r * sin(frameCount * speed);
+       
+       
+  }
  
  fill(100,100,100,50);
  stroke(0);
@@ -42,8 +53,7 @@ void draw(){
   
 
   r += .2;
-  
-// if( r1(10,10,9,9) >= width || mouseX < 0)
-//{speed *= -1; }
+
 }
+
 
